@@ -10,6 +10,5 @@ variable "skip_final_snapshot" {}
 variable "vpc_id" {}
 variable "sg-ingress-cidr" {}
 variable "instance_class" {}
-variable "count" {}
 
 
