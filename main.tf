@@ -50,7 +50,7 @@ resource "aws_security_group" "main" {
 }
 
 resource "aws_docdb_cluster_instance" "cluster_instances" {
-  count              = 1
+  count              = 2
   identifier         = "${local.names}-cluster-instance-${count.index+1}"
   cluster_identifier = aws_docdb_cluster.cluster.id
   instance_class     = var.instance_class
