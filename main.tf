@@ -55,3 +55,5 @@ resource "aws_docdb_cluster_instance" "cluster_instances" {
   cluster_identifier = aws_docdb_cluster.cluster.id
   instance_class     = var.instance_class
 }
+
+#
