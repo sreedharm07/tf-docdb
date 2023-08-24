@@ -48,3 +48,10 @@ resource "aws_security_group" "main" {
     ipv6_cidr_blocks = ["::/0"]
   }
 }
+
+resource "aws_docdb_cluster_instance" "cluster_instances" {
+  count              = var.count
+  identifier         = "${local.names}-cluster-instance-${count.index+1}"
+  cluster_identifier = aws_docdb_cluster.cluster.id
+  instance_class     = var.instance_class
+}
